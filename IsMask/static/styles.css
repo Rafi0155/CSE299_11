@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* LOGIN */
+
+.Login {
+    width: 100%;
+    height: 100%;
+    background: white;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 24px;
+    display: inline-flex;
+}
+
+.LoginNav {
+    align-self: stretch;
+    height: 72px;
+    padding-left: 64px;
+    padding-right: 64px;
+    background: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.Logo {
+    position: relative;
+}
+
+.logo {
+    align-self: stretch;
+    text-align: center;
+    color: black;
+    font-size: 27px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    line-height: 57.60px;
+}
+
+.Content0 {
+    height: 350px;
+    width: 350px;
+    padding: 48px;
+    border: 0.50px black solid;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 32px;
+    display: flex;
+    border-radius: 0.9375rem;
+}
+
+.SectionTitle {
+    align-self: stretch;
+    height: 109px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 24px;
+    display: flex;
+}
+
+.LogIn {
+    align-self: stretch;
+    text-align: center;
+    color: black;
+    font-size: 48px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    line-height: 120%;
+    word-wrap: break-word;
+}
+
+.Text {
+    align-self: stretch;
+    text-align: center;
+    color: black;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 150%;
+    word-wrap: break-word;
+}
+
+.Content1 {
+    align-self: stretch;
+    height: 376px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 24px;
+    display: flex;
+}
+
+.Form {
+    align-self: stretch;
+    height: 20vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    display: flex;
+}
+
+.Button {
+    text-decoration: none;
+    align-self: stretch;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border: 0.50px black solid;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    display: inline-flex;
+    background-color: #fff;
+    border-radius: 0.9375rem;
+    transition-duration: 0.4s;
+}
+
+.Button:hover {
+    background-color: #ebf1ff;
+}
+
+.IconGoogle {
+    width: 24px;
+    height: 24px;
+    position: relative;
+}
+
+.Image {
+    width: 18px;
+    height: 18px;
+    left: 3px;
+    top: 3px;
+    position: absolute;
+}
+
+.ButtonText {
+    color: black;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 150%;
+    word-wrap: break-word;
+    text-align: left;
+}
+
+.Footer {
+    height: 72px;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    display: inline-flex;
+}
+
+.FooterText {
+    text-align: center;
+    color: black;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 150%;
+    word-wrap: break-word;
+}
+
+/* LOGIN */
+
+.HomeNav {
+    width: 100vw;
+    height: 72px;
+    padding-left: 64px;
+    padding-right: 64px;
+    background: white;
+    border-bottom: 0.50px black solid;
+    flex-direction: column;
+    justify-content:
+        center;
+    align-items: center;
+    display: inline-flex;
+}
+
+.Container {
+    align-self: stretch;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+    display: inline-flex;
+}
+
+.Column0 {
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+}
+
+.Column1 {
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    display: flex;
+}
+
+.Button0 {
+    text-decoration: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background: #8FB3FF;
+    border: 0.50px black solid;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    display: flex;
+    border-radius: 0.9375rem;
+    transition-duration: 0.4s;
+}
+
+.Button0:hover {
+    background-color: #EEF4FF;
+}
+
+.GreetText {
+    align-self: stretch;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+}
+
+/* MEDIA QUERY */
+
+@media (max-width:655px) {
+    .Content0 {
+        height: 45vh;
+        width: 40vmax;
+        padding: 48px 20px;
+    }
+    .HomeNav {
+        width: 100%;
+        height: 72px;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    .GreetText {
+        padding-top: 10vmax;
+        line-height: 40px;
+    }
+}
