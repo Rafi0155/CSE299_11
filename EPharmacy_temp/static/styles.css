@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --black-color: #000000;
+    --white-color: #FFFFFF;
+    --light-grey-color: #F4F4F4;
+    --light-green-color: #92E3A9;
+    --pale-green-color: #def7e5;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+
+/* NAV */
+
+nav {
+    position: fixed;
+    width: 100%;
+    height: 72px;
+    padding-left: 64px;
+    padding-right: 64px;
+    background: var(--white-color);
+    border-bottom: 0.50px var(--black-color) solid;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    z-index: 1000;
+}
+
+.Container {
+    width: 1440px;
+    align-self: stretch;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    display: inline-flex;
+    text-align: center;
+}
+
+.Column1 {
+    flex: 1 1 0;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+}
+
+.Logo {
+    width: 156px;
+    position: relative;
+    color: var(--black-color);
+}
+
+.Logo h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 27px;
+}
+
+.Column2 {
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 32px;
+    display: flex;
+}
+
+.Column2 a {
+    color: var(--black-color);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    word-wrap: break-word;
+}
+.Column2 a:hover {
+    text-decoration: underline;
+}
+.Column2 a.active {
+    text-decoration: underline;
+}
+
+.Column2 .service {
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    display: flex;
+}
+.Column2 .service:hover {
+    text-decoration: none;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}
+
+.Column2 li ul.dropdown li {
+    display: block;
+}
+
+.Column2 li ul.dropdown{
+    display: none;
+    position: absolute;
+    background: var(--white-color);
+    padding: 15px;
+    border: 0.50px var(--black-color) solid;
+    line-height: 32px;
+    text-align: left;
+}
+
+.Column2 li:hover ul.dropdown {
+    display: block;
+}
+
+.Column3 {
+    flex: 1 1 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    display: inline-flex;
+}
+
+.Button {
+    padding: 8px 20px;
+    background: var(--light-green-color);
+    border: 0.50px var(--black-color) solid;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    color: var(--black-color);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    word-wrap: break-word;
+    cursor: pointer;
+    border-radius: 0.9375rem;
+}
+
+.Button:hover {
+    background-color: var(--pale-green-color);
+}
+#menu-icon {
+    cursor: pointer;
+    display: none;
+}
+#close-icon{
+    cursor: pointer;
+    display: none;
+}
+
+
+
+.hero{
+    margin-top:72px;
+    height:100vh;
+    background-color: var(--pale-green-color);
+}
+.hero1{
+    height:100vh;
+    background-color: var(--light-grey-color);
+}
+.hero2{
+    height:100vh;
+    background-color: var(--light-green-color);
+}
+@media screen and (max-width: 910px) {
+    nav {
+        position: fixed;
+        bottom: 0;
+        height: 72px;
+        padding: 0px 32px;
+        border-top: 0.50px var(--black-color) solid;
+    }
+    .Logo h4 {
+        font-size: 20px;
+    }
+     .Column3{
+        width: 100%;
+        position: absolute;
+        bottom:72px;
+        background: var(--white-color);
+        padding: 0 32px 32px 0;
+        transform: translateX(100%);
+        transition: all 0.1s linear;
+    }
+    .menu-active .Column3{
+        transform: translateX(0);
+    }
+    .Column2{
+        width: 100%;
+        background: var(--white-color);
+        position: absolute;
+        bottom:142px;
+        left: 0;
+        flex-direction: column;
+        border-top: 0.50px var(--black-color) solid;
+        padding:32px;
+        align-items: end;
+        justify-content: end;
+        transform: translateX(100%);
+        transition: all 0.1s linear;
+    }
+    .menu-active .Column2{
+        transform: translateX(0);
+    }
+    .Column2 .service {
+        justify-content: end;
+    }
+    .Column2 li ul.dropdown{
+        text-align: right;
+        position: relative;
+    }
+    #menu-icon {
+        display: block;
+    }
+    .menu-active #menu-icon{
+        display: none;
+    }
+    .menu-active #close-icon{
+        display: block;
+    }
+    .hero{
+        margin-top:0;
+    }
+    .hero2{
+        justify-content: end;
+        align-items: end;
+        margin-bottom:72px;
+    }
+}
