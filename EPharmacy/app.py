@@ -68,6 +68,7 @@ def logout():
 
 @app.route("/")
 def index():
+    session.clear()
     return render_template('home.html')
 
 @app.route("/shop")
@@ -75,6 +76,7 @@ def shop():
     if "google_id" in session:
         return render_template('shop.html', name = session["name"])
     else:
+        session.clear()
         return render_template('shop.html')
 
 
