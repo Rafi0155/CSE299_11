@@ -1,0 +1,21 @@
+#FINISHED::
+
+__FRONT END__:
+- used jinja to make a more structured code (had to learn it, took some time)
+
+__DB__:
+- made the DB in phpMyAdmin using MYsql (open docs to show work)
+- made a ER diagram for DBMS (https://dbdiagram.io/d/EPharmacy-6508b3a102bd1c4a5ecf03e2)
+- Download Bangladeshi medicine dataset from kaggle (already know which one to download)
+
+#PLAN TO FINISH SOON::
+
+- further worked on the frontend of the home page
+- designed the shop page
+- worked on the shop page front end
+
+#TO DO::
+
+- Use the downloaded dataset to create suitable database of your own
+- learn how manipulate csv files to create MySQL DB tables
+- Integrate the DB with the frontend (learning on pogress, taking some time)
