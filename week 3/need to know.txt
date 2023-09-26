@@ -1,0 +1,19 @@
+https://dgda.portal.gov.bd
+http://dgdagov.info/index.php/registered-products/allopathic
+
+pip install flask-sqlalchemy
+pip install MYSQL
+pip install flask-mysqldb
+
+DROP TABLE User;
+TRUNCATE TABLE User;
+
+CREATE TABLE History (
+    HistoryID INT AUTO_INCREMENT PRIMARY KEY,
+    UserID INT NOT NULL,
+    ProductID INT NOT NULL,
+    Quantity INT NOT NULL,
+    OrderDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (UserID) REFERENCES user(UserID),
+    FOREIGN KEY (ProductID) REFERENCES Product_info(productID)
+);
