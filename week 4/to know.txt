@@ -1,0 +1,18 @@
+https://youtu.be/krTt8Xdchow (Django)
+https://youtu.be/RXXWLj6S704 (PHP)
+
+ALTER TABLE user
+ADD Address VARCHAR(255),
+ADD PhoneNumber VARCHAR(15);
+
+https://pypi.org/project/sslcommerz-python/
+
+pip install sslcommerz-python (x)
+
+https://visualstudio.microsoft.com/downloads/
+(Download Build Tools for Visual Studio 2022)
+
+https://github.com/sslcommerz/SSLCommerz-Python
+
+pip install sslcommerz-lib (✓)
+
