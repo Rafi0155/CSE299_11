@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+{% block title %}History{% endblock %}
+{% block history_active %}active{% endblock %}
+{% block body %}
+
+{% if "google_id" in session: %}
+
+<div class="Products">
+    <div class="Product">
+
+        <div id="content-card-id" class="Content-card">
+            <div class="Header-card">
+                <div class="Price">
+                    Total spent: ৳{{ total_price }}
+                </div>
+
+            </div>
+            <div class="Column3">
+                <a href="{{ url_for('clear_history') }}" class="Button" id="remove-btn">
+                    <span class="material-symbols-outlined">
+                        delete_forever
+                    </span>
+                    &nbsp;Clear history</a>
+            </div>
+
+        </div>
+        <br><br />
+
+        <!-- CARD BEGIN -->
+
+        <div class="Card">
+
+            {% for item in history_items %}
+            <a href="{{ url_for('view_product', product_id=item.product.productID) }}">
+
+                <div class="Product-card">
+                    <img class="PlaceholderImage-shop"
+                        src="{{ url_for('static', filename='images/shop/' + item.product.Description.lower() + '.png') }}"
+                        loading="lazy" />
+                    <div class="Content-card">
+                        <div class="Header-card">
+                            <div class="Heading-card">
+                                {{ item.product.BrandName }}
+                            </div>
+                            <div class="Text-card">
+                                {{ item.product.Strength }}
+                            </div>
+                        </div>
+                        <div class="Price">
+                            ৳{{ item.product.Price }}
+                        </div>
+                    </div>
+                    <div class="form-shop">
+
+                        <div class="Input">
+                            <div class="Quantity">
+                                Quantity</div>
+                            <div class="TextInput">
+                                <div class="Placeholder">
+                                    {{ item.Quantity }}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="Text-card">
+                            {{ item.Timestamp.strftime("%B %d, %Y @ %I:%M %p") }}
+                        </div>
+
+                    </div>
+
+                </div>
+            </a>
+
+            {% endfor %}
+        </div>
+
+        <!-- CARD END -->
+
+        {% else: %}
+        <div class="Shop">
+            <h1>Sign in.</h1>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}
