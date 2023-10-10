@@ -1,0 +1,61 @@
+https://storyset.com/search?q=medical
+https://remixicon.com
+https://www.flaticon.com/search?author_id=4275&style_id=1374&type=standard&word=healthcare-and-medical
+
+SELECT DISTINCT Description
+FROM product_info;
+
+SELECT Description, COUNT(*) AS TotalCount
+FROM product_info
+GROUP BY Description;
+
+SELECT COUNT(DISTINCT Description) AS DescriptionCount, 
+COUNT(DISTINCT Manufacturer) AS ManufacturerCount, 
+COUNT(DISTINCT BrandName) AS BrandNameCount, 
+COUNT(DISTINCT GenericName) AS GenericNameCount
+FROM product_info;
+
+## PNGs ##
+_________________________________________________________________________________________________________________________________
+Capsule 		| https://www.flaticon.com/free-icon/pill_10996128
+Cream			| https://www.flaticon.com/free-icon/cream_10996054
+Eye and Ear Drops 	| https://www.flaticon.com/free-icon/listening_10996429
+Eye Drops 		| https://www.flaticon.com/free-icon/eye-drop_10996140
+Eye Ointment 		| https://www.flaticon.com/free-icon/eye-cream_5333072
+Injection 		| https://www.flaticon.com/free-icon/injection_10996020
+IV Infusion 		| https://www.flaticon.com/free-icon/glucometer_10996122
+IV Injection 		| https://www.flaticon.com/free-icon/intravenous_1988646?related_id=1988563&origin=search
+Ointment 		| https://www.flaticon.com/free-icon/medicine-tube_11469496
+Oral Solution 		| https://www.flaticon.com/free-icon/mouth_2203681
+Paediatric Drops      	| https://www.flaticon.com/free-icon/baby_4434480
+Powder For Suspension 	| https://www.flaticon.com/free-icon/drugs_6097110
+Solution 	      	| https://www.flaticon.com/free-icon/medicine_10996047
+Syrup 		      	| https://www.flaticon.com/free-icon/syrup_10996069
+Tablet 		      	| https://www.flaticon.com/free-icon/pill_10996072
+________________________|________________________________________________________________________________________________________
+
+Capsule
+Cream
+Eye and Ear Drops
+Eye Drops
+Eye Ointment
+Injection
+IV Infusion
+IV Injection
+Ointment
+Oral Solution
+Paediatric Drops
+Powder For Suspension
+Solution
+Syrup
+Tablet
+
+## Future TO DO
+_____________________
+1. Advance filtering system (filter by category)
+2. live chat
+3. point earning system (points store on purchace and discount based on point on next purchase)
+4. admin panel
+
+
+

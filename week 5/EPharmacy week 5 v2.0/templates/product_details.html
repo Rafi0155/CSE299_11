@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+{% block title %}Product details{% endblock %}
+{% block shop_active %}active{% endblock %}
+{% block body %}
+<div class="Products">
+    <div class="Product">
+        <!-- <br>
+        <img class="table-image" src="{{ url_for('static', filename='images/shop/' + product.Description.lower() + '.png') }}" loading="lazy"/>
+        <h1>{{ product.GenericName }}</h1>
+        <h2>Brand Name: {{ product.BrandName }}</h2>
+        <br>
+        <p>Manufacturer: {{ product.Manufacturer }}</p>
+        <p>Strength: {{ product.Strength }}</p>
+        <p>Description: {{ product.Description }}</p>
+        <br>
+        <h3>Price: {{ product.Price }} Tk</h3>
+        <br>
+        <p>Quantity: </p>
+        <form action="{{ url_for('add_to_cart', product_id=product.productID, redirect_url=request.url) }}"
+            method="post">
+            <input type="number" name="quantity" value="1" min="1">
+            <button type="submit" value="Add to Cart"><span class="material-symbols-outlined">
+                add_shopping_cart
+                </span></button>
+        </form>
+        <br> -->
+
+        <!-- PRODUCT DETAIL BEGING -->
+        <div class="ProductHeader1">
+
+            <div class="Content-product-details">
+                <div class="Product-product-details">
+                    <div class="Column1-product-details">
+                        <img class="PlaceholderImage"
+                            src="{{ url_for('static', filename='images/shop/' + product.Description.lower() + '.png') }}"
+                            loading="lazy" />
+                    </div>
+                </div>
+                <div class="Column2-product-details">
+                    <div class="ProductDescription">
+                        <div class="ProductName">
+                            <div class="Heading-product-details">{{ product.BrandName }}</div>
+                            <div class="Text-product-details">
+                                <b>Generic name:</b> {{ product.GenericName }}
+                            </div>
+                            <div class="Price-product-details">৳{{ product.Price }} </div>
+                        </div>
+                        <div class="Text-product-details">
+                            <b>Manufacturer:</b> {{ product.Manufacturer }}
+                            <br>
+                            <b>Category:</b> {{ product.Description }}
+
+                        </div>
+                        <!-- <div class="Input"> -->
+                        <div class="Variant"><b>Strength:</b> {{ product.Strength }}</div>
+                        <!-- </div> -->
+
+                        <div class="form-product-details">
+                        <form
+                            action="{{ url_for('add_to_cart', product_id=product.productID, redirect_url=request.url) }}"
+                            method="post">
+                                <div class="Quantity">Quantity</div>
+                                <div class="TextInput">
+                                    <input class="Placeholder" type="number" name="quantity" value="1" min="1">
+                                    <!-- <div class="Placeholder">1</div> -->
+                                </div>
+                            <div class="FormSubmit">
+                                <button class="Button-product-details" type="submit" value="Add to Cart">
+                                    <div class="Button-text">Add To Cart </div>
+                                    <span class="material-symbols-outlined">
+                                        add_shopping_cart
+                                    </span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- PRODUCT DETAIL END -->
+
+    </div>
+</div>
+
+{% endblock %}

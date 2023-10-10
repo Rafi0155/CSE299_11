@@ -1,0 +1,107 @@
+{% extends "layout.html" %}
+{% block title %}Cart{% endblock %}
+{% block cart_active %}active{% endblock %}
+{% block body %}
+
+{% if "google_id" in session: %}
+
+<div class="Products">
+    <div class="Product">
+
+        <!-- <div class="Cart_column3">
+            <br>
+            <h3>Total price:<br> ৳{{ total_price }}</h3>
+            <br />
+            <div class="Column3">
+                <a href="{{ url_for('checkout') }}" class="Button">
+                    <span class="material-symbols-outlined">
+                        shopping_cart_checkout
+                    </span>
+                    &nbsp;Checkout</a>
+            </div>
+            <br><br />
+        </div> -->
+
+        <div id="content-card-id" class="Content-card">
+            <div class="Header-card">
+                <div class="Price">
+                    Total price: ৳{{ total_price }}
+                </div>
+
+            </div>
+            <div class="Column3">
+                <a href="{{ url_for('checkout') }}" class="Button">
+                    <span class="material-symbols-outlined">
+                        shopping_cart_checkout
+                    </span>
+                    &nbsp;Checkout</a>
+            </div>
+
+        </div>
+        <br><br />
+
+        <!-- CARD BEGIN -->
+
+        <div class="Card">
+
+            {% for item in cart_items %}
+            <a href="{{ url_for('view_product', product_id=item.product.productID) }}">
+
+                <div class="Product-card">
+                    <img class="PlaceholderImage-shop"
+                        src="{{ url_for('static', filename='images/shop/' + item.product.Description.lower() + '.png') }}"
+                        loading="lazy" />
+                    <div class="Content-card">
+                        <div class="Header-card">
+                            <div class="Heading-card">
+                                {{ item.product.BrandName }}
+                            </div>
+                            <div class="Text-card">
+                                {{ item.product.Strength }}
+                            </div>
+                        </div>
+                        <div class="Price">
+                            ৳{{ item.product.Price }}
+                        </div>
+                    </div>
+                    <div class="form-shop">
+
+                        <div class="Input">
+                            <div class="Quantity">
+                                Quantity</div>
+                            <div class="TextInput">
+                                <div class="Placeholder">
+                                    {{ item.Quantity }}
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="form-group" style="margin-top:25px">
+                            <a href="{{ url_for('remove_from_cart', cart_id=item.CartID) }}"
+                                class="Button-container-card">
+                                <div class="Button-card">
+                                    Remove from cart
+                                </div>
+                                <span class="material-symbols-outlined">
+                                    remove_shopping_cart
+                                </span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </a>
+
+            {% endfor %}
+        </div>
+        <!-- CARD END -->
+
+        {% else: %}
+        <div class="Shop">
+            <h1>Sign in.</h1>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}

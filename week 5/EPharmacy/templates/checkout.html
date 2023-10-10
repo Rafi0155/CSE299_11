@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block title %}Billing details{% endblock %}
+{% block cart_active %}active{% endblock %}
+{% block body %}
+{% if "google_id" in session: %}
+
+<div class="Products">
+    <div class="OrderProduct">
+        <p>Name: {{name}}</p>
+        <p>Email: {{email}}</p>
+        <h3>Total price: {{ total_price }} Tk</h3>
+        <br></br>
+        <form id="order" action="{{ url_for('order') }}" method="post">
+            <!-- <input type="text" name="address" placeholder="Address" required> -->
+            <p>Home Address : </p>
+            <input type="text" name="address" value="{{address}}" placeholder="Address" required>
+            <br></br>
+            <!-- +880 <input type="number" name="phone_number" placeholder="Phone Number" required> -->
+            <p>Phone Number : </p>
+            +880 <input type="number" name="phone_number" value="{{phone}}" placeholder="Phone Number" required>
+            <br></br>
+
+            <button type="submit" value="order">
+                    <span class="material-symbols-outlined">
+                        payments
+                    </span>
+                    Place Order
+            </button>
+        </form>
+
+        {% else: %}
+        <div class="Shop">
+            <h1>Sign in.</h1>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}
