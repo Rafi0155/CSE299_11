@@ -56,6 +56,6 @@ _____________________
 2. live chat
 3. point earning system (points store on purchace and discount based on point on next purchase)
 4. admin panel
-
+5. favicon
 
 
