@@ -1,0 +1,9 @@
+pip install flask-ngrok
+
+UPDATE product_info
+SET Description = REPLACE(Description, 'IV/IM Injection', 'IV_IM Injection')
+WHERE Description LIKE '%IV/IM Injection%';
+
+https://dashboard.tawk.to/#/chat
+collect.chat
+

@@ -1,0 +1,105 @@
+{% extends "layout.html" %}
+{% block title %}Billing details{% endblock %}
+{% block cart_active %}active{% endblock %}
+{% block body %}
+{% if "google_id" in session: %}
+
+<!-- <div class="Products">
+    <div class="OrderProduct">
+        <p>Name: {{name}}</p>
+        <p>Email: {{email}}</p>
+        <h3>Total price: {{ total_price }} Tk</h3>
+        <br></br>
+        <form id="order" action="{{ url_for('order') }}" method="post">
+            //<input type="text" name="address" placeholder="Address" required>
+            <p>Home Address : </p>
+            <input type="text" name="address" value="{{address}}" placeholder="Address" required>
+            <br></br>
+            //+880 <input type="number" name="phone_number" placeholder="Phone Number" required>
+            <p>Phone Number : </p>
+            +880 <input type="number" name="phone_number" value="{{phone}}" placeholder="Phone Number" required>
+            <br></br>
+
+            <button type="submit" value="order">
+                    <span class="material-symbols-outlined">
+                        payments
+                    </span>
+                    Place Order
+            </button>
+        </form>
+
+        {% else: %}
+        <div class="Shop">
+            <h1>Sign in.</h1>
+        </div>
+        {% endif %}
+    </div>
+</div> -->
+
+<!-- CHECKOUT BEGIN -->
+
+<div class="Contact5">
+    <div class="Container-checkout">
+        <div class="Contents-checkout">
+            <div class="SectionTitle">
+                <div class="Subheading">Payment</div>
+                <div class="Content1-checkout">
+                    <div class="Heading2">Checkout</div>
+                    <div class="Subheading-checkout">Thanks for choosing us.</div>
+                </div>
+            </div>
+            <div class="Content2-checkout">
+                <div class="Row1-checkout">
+                    <span class="material-symbols-outlined">
+                        face
+                    </span>
+                    <div class="Name-checkout">
+                        {{name}}</div>
+                </div>
+                <div class="Row1-checkout">
+                    <span class="material-symbols-outlined">
+                        mail
+                    </span>
+                    <div class="Name-checkout">
+                        {{email}}</div>
+                </div>
+                <div class="Row1-checkout">
+                    <span class="material-symbols-outlined">
+                        payments
+                    </span>
+                    <div class="Name-checkout">
+                        ৳{{ total_price }}</div>
+                </div>
+            </div>
+        </div>
+
+
+            <form class="Form-checkout" action="{{ url_for('order') }}" method="post">
+                <div class="Input-checkout">
+                    <div class="Quantity">Home address</div>
+
+                    <input class="TextInput-checkout" type="text" name="address" value="{{address}}"
+                        placeholder="Address" required>
+                </div>
+
+                <div class="Input-checkout">
+                    <div class="Quantity">Phone number: +880</div>
+
+                    <input class="TextInput-checkout" type="number" name="phone_number" value="{{phone}}"
+                        placeholder="Phone Number" required>
+                </div>
+
+                <button class="Button-checkout" type="submit" value="order">
+                    <span class="material-symbols-outlined">
+                        shopping_bag
+                        </span>
+                    Place Order
+                </button>
+            </form>
+
+    </div>
+</div>
+
+<!-- CHECKOUT END -->
+
+{% endblock %}
